@@ -1,4 +1,5 @@
 import preprocess from 'svelte-preprocess';
+import json from '@rollup/plugin-json';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,7 +11,14 @@ const config = {
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		vite: () => ({
+			plugins: [
+				json({
+					compact: true
+				})
+			]
+		})
 	}
 };
 

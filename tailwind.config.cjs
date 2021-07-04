@@ -4,7 +4,14 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				theme: {
+					light: '#1C3945',
+					dark: '#FFFFFF'
+				}
+			},
+		},
 	},
 	plugins: [],
 };
