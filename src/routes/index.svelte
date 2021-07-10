@@ -3,9 +3,11 @@
 </script>
 
 <main class="flex flex-col items-center justify-start mt-16">
-	<h1>
+	<!-- TODO: add dark theme support -->
+	<header>
+		<!-- TODO: replace SVG by font based text for easy content modifying -->
 		<svg
-			class="inline-block"
+			class="inline-block w-64 md:w-auto"
 			width="331"
 			viewBox="0 0 631 106"
 			fill="none"
@@ -16,41 +18,38 @@
 				fill="#113A46"
 			/>
 		</svg>
-	</h1>
-	<p class="text-xl text-theme-light font-serif mt-9">Here's a scoop of my plans. 🥄</p>
-	<ul class="flex flex-row flex-wrap items-center pr-24 bg-blue-300 font-serif">
-		<li class="mt-24 ml-24 bg-green-300">
-			<h2>
-				<a class="text-theme-light text-2xl font-serif hover:underline hover:" href="#"
-					>{plans.items[0].title}</a
+	</header>
+	<p class="text-xl text-theme-light font-serif mt-9">Here's a spoon of my plans. 🥄</p>
+	<main
+		class="flex flex-col flex-wrap justify-around md:flex-row items-center w-5/6 md:w-4/6 md:pl-36 md:pr-36  font-serif"
+	>
+		{#each plans.items as plan}
+			<div class="flex flex-row justify-center mt-6 md:mt-14 min-w-20 md:w-5/12">
+				<!-- TODO: add task card animation -->
+				<section
+					class="flex flex-row justify-center items-center w-72 md:h-48 border-2 border-dashed rounded-tr-3xl rounded-bl-3xl"
 				>
-			</h2>
-			<ul>
-				<li class="mt-4">GitHub: <a href="#">{plans.items[0].gitlink}</a></li>
-				<li class="mt-1">Host: <a href="#">{plans.items[0].host}</a></li>
-			</ul>
-		</li>
-		<li class="mt-24 ml-24 bg-green-300">
-			<h2>
-				<a class="text-theme-light text-2xl font-serif hover:underline hover:" href="#"
-					>{plans.items[1].title}</a
-				>
-			</h2>
-			<ul>
-				<li class="mt-4">GitHub: <a href="#">{plans.items[1].gitlink}</a></li>
-				<li class="mt-1">Host: <a href="#">{plans.items[1].host}</a></li>
-			</ul>
-		</li>
-		<li class="mt-24 ml-24 bg-green-300">
-			<h2>
-				<a class="text-theme-light text-2xl font-serif hover:underline hover:" href="#"
-					>{plans.items[0].title}</a
-				>
-			</h2>
-			<ul>
-				<li class="mt-4">GitHub: <a href="#">{plans.items[0].gitlink}</a></li>
-				<li class="mt-1">Host: <a href="#">{plans.items[0].host}</a></li>
-			</ul>
-		</li>
-	</ul>
+					<div>
+						<h2>
+							<a
+								class="text-theme-light text-2xl font-serif underline hover:no-underline"
+								href={plan.gitlink}>{plans.items[0].title}</a
+							>
+						</h2>
+						<ul>
+							<!-- TODO: add icon -->
+							<li class="mt-4">GitHub: <a href={plan.gitlink}>Link Here</a></li>
+							<li class="mt-1">Host: <a href={plan.host}>Link Here</a></li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		{/each}
+		<div class="mt-24 min-w-20 md:w-5/12 " />
+	</main>
+	<footer
+		class="flex flex-row justify-center items-center w-64 h-10 mt-28 text-theme-light font-mono "
+	>
+		© 2021 Megrax
+	</footer>
 </main>
