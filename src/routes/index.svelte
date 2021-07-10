@@ -47,10 +47,10 @@
 				</section>
 			</div>
 		{/each}
-		<div class="mt-24 min-w-20 md:w-5/12 " />
+		<div class="mt-6 min-w-20 md:w-5/12 " />
 	</main>
 	<footer
-		class="flex flex-row justify-center items-center w-64 h-10 mt-28 text-theme-light font-mono "
+		class="flex flex-row justify-center items-center w-64 h-20 md:mt-28 text-theme-light font-mono "
 	>
 		© 2021 Megrax
 	</footer>
