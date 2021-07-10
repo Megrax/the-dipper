@@ -2,7 +2,7 @@
 	import { plans } from '../../plans';
 </script>
 
-<svelte:head><title>🥄 Dipper of Megrax</title></svelte:head>
+<svelte:head><title>Stir it up!</title></svelte:head>
 
 <main class="flex flex-col items-center justify-start mt-16">
 	<!-- TODO: add dark theme support -->
