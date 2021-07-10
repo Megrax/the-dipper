@@ -1,5 +1,5 @@
 <script>
-	import * as plans from '../../plans.json';
+	import { plans } from '../../plans';
 </script>
 
 <svelte:head><title>🥄 Dipper of Megrax</title></svelte:head>
@@ -29,19 +29,24 @@
 			<div class="flex flex-row justify-center mt-6 md:mt-14 min-w-20 md:w-5/12">
 				<!-- TODO: add task card animation -->
 				<section
-					class="flex flex-row justify-center items-center w-72 md:h-48 border-2 border-dashed rounded-tr-3xl rounded-bl-3xl"
+					class="flex flex-col justify-center items-center w-72 md:h-48 border-2 border-dashed rounded-tr-3xl rounded-bl-3xl"
 				>
-					<div>
+					<div class="flex flex-col justify-center items-center">
 						<h2>
 							<a
 								class="text-theme-light text-2xl font-serif underline hover:no-underline"
-								href={plan.gitlink}>{plans.items[0].title}</a
+								href={`#${plan.hashtag}`}
+								name={`#${plan.hashtag}`}>{plan.title}</a
 							>
 						</h2>
 						<ul>
 							<!-- TODO: add icon -->
-							<li class="mt-4">GitHub: <a href={plan.gitlink}>Link Here</a></li>
-							<li class="mt-1">Host: <a href={plan.host}>Link Here</a></li>
+							<li class="mt-4">GitHub: <a class="link" href={plan.gitlink}>Link Here</a></li>
+							{#if plan.host !== '#'}
+								<li class="mt-1">Host: <a class="link" href={plan.host}>Link Here</a></li>
+							{:else}
+								<li class="mt-1">Host: 🚧 None Yet</li>
+							{/if}
 						</ul>
 					</div>
 				</section>
