@@ -2,6 +2,8 @@
 	import * as plans from '../../plans.json';
 </script>
 
+<svelte:head><title>🥄 Dipper of Megrax</title></svelte:head>
+
 <main class="flex flex-col items-center justify-start mt-16">
 	<!-- TODO: add dark theme support -->
 	<header>
