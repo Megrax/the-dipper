@@ -19,16 +19,22 @@ export const plans = {
 			host: "http://zjbsh.zjhwrc.com/#/"
 		},
 		{
-			title: "QQ Robot",
-			hashtag: "qq-robot",
-			gitlink: "https://github.com/Megrax/OICQ-robot",
-			host: "#"
+			title: "My Blog",
+			hashtag: "blog",
+			gitlink: "https://github.com/Megrax/myblog",
+			host: "https://blog.megrax.space"
 		},
 		{
 			title: "StoryBook Snippets",
 			hashtag: "vscode-vue-storybook-snippets",
 			gitlink: "https://github.com/Megrax/vscode-vue-storybook-snippets",
 			host: "https://marketplace.visualstudio.com/items?itemName=Megrax.vue-storybook-snippets&ssr=false#overview"
-		}
+		},
+		{
+			title: "QQ Robot",
+			hashtag: "qq-robot",
+			gitlink: "https://github.com/Megrax/OICQ-robot",
+			host: "#"
+		},
 	]
 }
