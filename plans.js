@@ -7,12 +7,6 @@ export const plans = {
 			host: "https://dipper.megrax.space"
 		},
 		{
-			title: "Toy React",
-			hashtag: "toy-react",
-			gitlink: "https://github.com/Megrax/toy-react",
-			host: "#"
-		},
-		{
 			title: "zjbsh map",
 			hashtag: "zjbsh-map",
 			gitlink: "https://gitee.com/hdu_practice/zjbsh-mb/tree/megrax-dev/",
@@ -31,9 +25,9 @@ export const plans = {
 			host: "https://marketplace.visualstudio.com/items?itemName=Megrax.vue-storybook-snippets&ssr=false#overview"
 		},
 		{
-			title: "QQ Robot",
-			hashtag: "qq-robot",
-			gitlink: "https://github.com/Megrax/OICQ-robot",
+			title: "Merak",
+			hashtag: "merak",
+			gitlink: "https://github.com/Megrax/merak",
 			host: "#"
 		},
 	]
